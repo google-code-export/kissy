@@ -1,14 +1,13 @@
 #labels Phase-Deploy
-#The usage of imagelazyload component.
 
-= 使用场景 =
+== 使用场景 ==
 
 存在大量图片的页面，比如频道页、活动页、搜索结果页等
 
 测试页面：http://kissy.googlecode.com/svn/trunk/src/imglazyload/test.html
 
 
-= 使用说明 =
+== 使用说明 ==
 
 在页脚添加以下代码即可： 
 {{{
@@ -18,7 +17,7 @@
 注：该脚本依赖 yahoo-dom-event, 页面中需要加载 yui 2.x
 
 
-= 高级使用说明 =
+== 高级使用说明 ==
 
 配置参数如下： 
 {{{
