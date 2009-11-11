@@ -35,4 +35,4 @@ manual 模式时，需要手动将页面中需要延迟加载的图片的 src �
 <img data-lazy-src="path/to/img" alt="something" />
 }}}
 
-更详细的配置信息，请阅读源码：http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/imglazyload.js
+更详细的配置信息，请阅读源码：http://kissy.googlecode.com/svn/trunk/src/imglazyload/imglazyload.js
