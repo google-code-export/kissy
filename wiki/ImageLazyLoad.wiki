@@ -1,5 +1,5 @@
+#summary imagelazyload 组件使用说明
 #labels Phase-Deploy
-#imagelazyload 组件使用说明
 
 == 使用场景 ==
 
