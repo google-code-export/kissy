@@ -1,0 +1,38 @@
+#labels Phase-Deploy
+#The usage of imagelazyload component.
+
+= 使用场景 =
+
+存在大量图片的页面，比如频道页、活动页、搜索结果页等
+
+测试页面：http://kissy.googlecode.com/svn/trunk/src/imglazyload/test.html
+
+
+= 使用说明 =
+
+在页脚（一般为 </body> 前面）添加以下代码即可： 
+{{{
+<script type="text/javascript" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/imglazyload-min.js"></script>
+<script type="text/javascript">KISSY.ImageLazyload();</script>
+}}}
+注：该脚本依赖 yahoo-dom-event, 页面中需要加载 yui 2.x
+
+
+= 高级使用说明 =
+
+配置参数如下： 
+{{{
+<script type="text/javascript">
+    KISSY.ImageLazyload({
+        mod: "manual", // 延迟模式。默认为 auto
+        diff: 200 // 当前屏幕下多远处的图片开始延迟加载。默认两屏外的图片才延迟加载
+    });
+</script>
+}}}
+
+manual 模式时，需要手动将页面中需要延迟加载的图片的 src 属性名更改为 data-lazyload-src. 比如 SRP 页面，宝贝列表的后20个图片延迟加载。输出时，html 代码为： 
+{{{
+<img data-lazy-src="path/to/img" alt="something" />
+}}}
+
+更详细的配置信息，请阅读源码：http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/imglazyload.js
