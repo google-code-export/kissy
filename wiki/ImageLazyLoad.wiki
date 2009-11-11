@@ -10,7 +10,7 @@
 
 = 使用说明 =
 
-在页脚（一般为 &lt;/body&gt; 前面）添加以下代码即可： 
+在页脚添加以下代码即可： 
 {{{
 <script type="text/javascript" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/imglazyload-min.js"></script>
 <script type="text/javascript">KISSY.ImageLazyload();</script>
