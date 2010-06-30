@@ -17,6 +17,7 @@
   # 修改了 YUIBridge专有入口参数关键字 “YUISwfId” 至 AJBridge普适型参数关键字“swfID”
   # 修改了 swf ID的获取方式
   # 增加了 try...catch... 处理来自中国其他第三方浏览器加速产生的SWF配置实效问题。
+  # 回调jsEntry 只给出1个参数，并将 swfID 包含在了了回调事件中。这与YUIBridge的 YUIBridgeCallback不同，YUI调用方式是  function (swfid,event){}方式。而 AJBridge则为function (event){}
 
 == 必要参数关键字 ==
 === jsEntry ===
@@ -25,6 +26,7 @@
   * 请确保Web 页中SWF对象 allowScriptAccess 设置为 "always" 。
   * 传入的值是 web页中已存在的 js 方法名。它将作为 swf 唯一的所有事件出口 。
   * 如果没有指定该值，则默认使用名为“jsEntry”的js方法。
+  * 传出只有1个参数对象 Object。
 === swfID ===
   * 必选
   * 请确保以 flashvars 方式或 类似 swf?swfID = "myAlternativeContent"方式传入。
@@ -34,25 +36,52 @@
 ===完整示例===
   * 静态方法
   {{{
-                     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1" id="myFlashContent">
-				<param name="movie" value="ajb.swf" />
-				<param name="allowscriptaccess" value="always" />
-				<param name="flashvars" value="swfID=myFlashContent&amp;jsEntry=jsEntry" />
-				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="ajb.swf" width="1" height="1">
-					<param name="allowscriptaccess" value="always" />
-					<param name="flashvars" value="swfID=myFlashContent&amp;jsEntry=jsEntry" />
-				<!--<![endif]-->
-					<a href="http://www.adobe.com/go/getflashplayer">
-						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
-					</a>
-				<!--[if !IE]>-->
-				</object>
-				<!--<![endif]-->
-			</object>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1" id="myFlashContent">
+	<param name="movie" value="ajb.swf" />
+	<param name="allowscriptaccess" value="always" />
+	<param name="flashvars" value="swfID=myFlashContent&amp;jsEntry=jsEntry" />
+	<!--[if !IE]>-->
+	<object type="application/x-shockwave-flash" data="ajb.swf" width="1" height="1">
+		<param name="allowscriptaccess" value="always" />
+		<param name="flashvars" value="swfID=myFlashContent&amp;jsEntry=jsEntry" />
+	<!--<![endif]-->
+		<a href="http://www.adobe.com/go/getflashplayer">
+			<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+		</a>
+	<!--[if !IE]>-->
+	</object>
+	<!--<![endif]-->
+</object>                     
 }}}
-  * 动态方法
+  * 动态方法(通用型，以SWFObject为例)
+  {{{
+<script type="text/javascript" src=".../swfoject/2.2/swfobject.js"></script>
+<script type="text/javascript">
+var flashvars = {};
+var swf,getItemTmr,setItemTmr,setStr;
+var KEY = "test"
 
+flashvars.swfID = "myAlternativeContent";
+flashvars.jsEntry = "jsEntry";
+
+var params = {};
+params.allowscriptaccess = "always";
+var attributes = {};
+
+function onAddedToDom(e){
+	alert("addedToDom")
+}
+
+function jsEntry(event){
+	alert("jsEntry")
+}
+
+			
+
+swfobject.embedSWF("SWFStore.swf", "myAlternativeContent", "800", "600", "9.0.0", false, flashvars, params, attributes,onAddedToDom);
+		</script>
+
+}}}
 
   
 == 公开的事件 ==
