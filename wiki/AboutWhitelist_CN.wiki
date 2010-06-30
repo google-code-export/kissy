@@ -1,0 +1,21 @@
+= 介绍 =
+
+由于某些SWF应用单单通过服务端的crossdomain.xml策略文件配置是不够的，因此将在相关的应用中增加白名单(whitelist)策略文件，增强客户端获取信息安全性。
+
+= 预览 =
+  {{{
+ <?xml version="1.0" encoding="utf-8"?>
+<domain-policy>   
+       <allow-access-from domain="192.168.1.1" />
+       <allow-access-from domain="test1.YOURDOMAIN.net" />
+       <allow-access-from domain="*.app.YOURDOMAIN.net" />
+</domain-policy> 
+}}}
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
