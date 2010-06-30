@@ -92,15 +92,15 @@ swfobject.embedSWF("SWFStore.swf", "myAlternativeContent", "800", "600", "9.0.0"
 === addCallback ===
   * AJBridge中与addCallbacks并列的第二个事件。
   * 注册单个向JS公开方法后产生。
-  * 如果无法调用，则抛出*隐含的错误*。
+  * 如果无法调用，则抛出 *隐含的错误*。
 === addCallbacks ===
   * AJBridge中与addCallback并列的第二个事件。
   * 注册多个向JS公开方法后产生。
-  * 如果无法调用，则抛出*隐含的错误*。
+  * 如果无法调用，则抛出 *隐含的错误* 。
 === swfReady ===
   * AJBridge第三个事件。
   * 由AS3程序员定义。
-  * 如果无法调用，则抛出*隐含的错误*。
+  * 如果无法调用，则抛出 *隐含的错误* 。
 一般固定的格式（类型&key）:
   {{{
 {
@@ -109,5 +109,3 @@ swfobject.embedSWF("SWFStore.swf", "myAlternativeContent", "800", "600", "9.0.0"
  any   data  // 任意数据类型，请在外部做匹配或判断。
 }
 }}}
-
-=实践的建议=
