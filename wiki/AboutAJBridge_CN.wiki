@@ -25,6 +25,34 @@
   * 请确保Web 页中SWF对象 allowScriptAccess 设置为 "always" 。
   * 传入的值是 web页中已存在的 js 方法名。它将作为 swf 唯一的所有事件出口 。
   * 如果没有指定该值，则默认使用名为“jsEntry”的js方法。
+=== swfID ===
+  * 必选
+  * 请确保以 flashvars 方式或 类似 swf?swfID = "myAlternativeContent"方式传入。
+  * 请确保swfID传入的值 和 SWF所在web 页面中 HTML元素 id一致。
+  * 如果没有指定该值，则默认使用名为“mySWF”的SWF对象，一旦调用失败将报错。
+
+===完整示例===
+  * 静态方法
+  {{{
+                     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1" id="myFlashContent">
+				<param name="movie" value="ajb.swf" />
+				<param name="allowscriptaccess" value="always" />
+				<param name="flashvars" value="swfID=myFlashContent&amp;jsEntry=jsEntry" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="ajb.swf" width="1" height="1">
+					<param name="allowscriptaccess" value="always" />
+					<param name="flashvars" value="swfID=myFlashContent&amp;jsEntry=jsEntry" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflashplayer">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+}}}
+  * 动态方法
+
 
   
 == 公开的事件 ==
