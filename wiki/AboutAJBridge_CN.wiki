@@ -58,8 +58,8 @@
 <script type="text/javascript" src=".../swfoject/2.2/swfobject.js"></script>
 <script type="text/javascript">
 var flashvars = {};
-var swf,getItemTmr,setItemTmr,setStr;
-var KEY = "test"
+var swf;
+
 
 flashvars.swfID = "myAlternativeContent";
 flashvars.jsEntry = "jsEntry";
