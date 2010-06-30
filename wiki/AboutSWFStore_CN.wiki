@@ -1,7 +1,7 @@
 #HTML5 时代的先行者
 
 = 版本 =
-  * 2.0       20100629
+  * 2.0          20100629
 
 = 介绍 =
 
@@ -42,7 +42,22 @@
 = 详情 =
 
 == 公开的参数关键字 ==
+=== useCompression ===
+=== browser===
 
 == 公开给JS的方法 ==
+=== getLength():uint ===
+=== getItem(key: String):* ===
+=== setItem(key:String,data:*): void ===
+=== key(index: int): String ===
+=== removeItem(key:String): void ===
+=== clear(): void ===
+=== getSize(): uint ===
+=== setMinDiskSpace(value: int): String ===
+=== getUseCompression(): Boolean ===
+=== displaySettings(): void ===
+=== hasAdequateDimensions(): Boolean ===
+=== getModificationDate(): Date ===
+
 
 == 公开给JS的事件 ==
