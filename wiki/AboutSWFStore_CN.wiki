@@ -37,9 +37,9 @@
   || setShareData() || 已取消。数据将永久跨域跨浏览器，使用前请考虑[AboutWhitelist_CN 白名单机制] || 
   || getShareData() || 已取消 ||
   || hasAdequateDimensions() || hasAdequateDimensions() ||
-  * 公开事件变更
+  * 公开事件变更（保留的则都加了前缀Store，保持事件命名空间）
  || *YUIBridge* || *AJBridge* || 
- || save || flushed ||
+ || save || Store:flushed ||
  || openingDialog || 已取消 ||
  || inadequateDimensions || 已取消 ||
  || error || 已取消 ||
