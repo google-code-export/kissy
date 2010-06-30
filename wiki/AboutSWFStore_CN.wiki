@@ -10,10 +10,38 @@
 
 另外加入了 [AboutWhitelist_CN 白名单机制] ，并融入了 最新 [AboutAJBridge_CN AJBridge 1.5版本]。
 
-= 变更 =
+参考了 HTML5 Web storage 接口 http://dev.w3.org/html5/webstorage/ 和事件  并融入了  SWFStore 中。
 
+= 关键变更 =
+  # 去掉了YUIBridge 加入了 AJBridge。
+  # 加入最新的白名单验证方式。
+  # 公开方法变更
+  || *YUIBridge* || *AJBridge* || 
+  || getValueOf() || getItem() || 
+  || getItems() || 已取消 || 
+  || getValueAt() || 已取消 || 
+  || getNameAt()  || key() || 
+  || getLength() || getLength() || 
+  || getModificationDate() || getModificationDate() || 
+  || calculateCurrentSize() || getSize() || 
+  || setItem() || setItem() || 
+  || removeItem() || removeItem() || 
+  || removeItemAt() || 已取消 || 
+  || clear() || clear() || 
+  || setSize() || setMinDiskSpace() || 
+  || displaySettings() || displaySettings() || 
+  || getTypeOf() || 已取消 || 
+  || getTypeAt() || 已取消 || 
+  || setUseCompression() || 已取消,由swf传参配置 || 
+  || getUseCompression() || getUseCompression() || 
+  || setShareData() || 已取消。数据将永久跨域跨浏览器，使用前请考虑[AboutWhitelist_CN 白名单机制] || 
+  || getShareData() || 已取消 ||
+  || hasAdequateDimensions() || hasAdequateDimensions() ||
+  # 公开事件变更
 
 = 详情 =
+
+== 公开的参数关键字 ==
 
 == 公开给JS的方法 ==
 
