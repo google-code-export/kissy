@@ -40,25 +40,24 @@
   * 公开事件变更
  || *YUIBridge* || *AJBridge* || 
  || save || flushed ||
- || openingDialog ||  ||
- || inadequateDimensions ||  ||
- || error ||  ||
- || securityError ||  ||
+ || openingDialog || 已取消 ||
+ || inadequateDimensions || 已取消 ||
+ || error || 已取消 ||
+ || securityError || 已取消 ||
  || contentReady || Store:contentReady||
- || pending|| pending ||
- || quotaExceededError ||  ||
- || success ||  ||
- ||   ||  Store:clear ||
- ||  || Store:trustedDomain ||
- ||  || Store:untrustedDomain ||
- ||  || Store:initialization ||
- ||  || Store:flushed ||
- ||  || Store:pending ||
- ||  || Store:clear ||
- ||  || Store:showSettings ||
- ||  || Store:uncompressError ||
- ||  || Store:flushError ||
- ||  || Store:showSettingsError ||
+ || pending|| Store:pending ||
+ || quotaExceededError || 已取消 ||
+ || success || Store:success ||
+ || 不存在  ||  Store:clear ||
+ || 不存在 || Store:untrustedDomain ||
+ || 不存在 || Store:initialization ||
+ || 不存在 || Store:flushed ||
+ || 不存在 || Store:pending ||
+ || 不存在 || Store:clear ||
+ || 不存在 || Store:showSettings ||
+ || 不存在 || Store:uncompressError ||
+ || 不存在 || Store:flushError ||
+ || 不存在 || Store:showSettingsError ||
 
 
 = 详情 =
