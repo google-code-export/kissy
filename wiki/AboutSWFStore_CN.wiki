@@ -66,6 +66,7 @@
 = 详情 =
 
 == 公开的参数关键字： ==
+注意，传值都为String
 === useCompression ===
   * 使用压缩标记
   * 类型： String
@@ -78,7 +79,7 @@
 == 公开给JS的方法： ==
 _格式：function(in arguments:type):return-type_
 _其中:_
-_ * 表示无类型，需要再次匹配或判断。_
+_ `*` 表示无类型，需要再次匹配或判断。_
 _void 表示无返回。_
 
 === getLength():uint ===
@@ -139,10 +140,20 @@ _void 表示无返回。_
      #Store:uncompressError
      #Store:showSettingsError
 === getUseCompression(): Boolean ===
-
+  * 查看是否使用了压缩。
+  * 若要改变，请在初始化的时候通过useCompression进行配置。
 === displaySettings(): void ===
+  * 显示用户自定义本地存储空间大小。默认就具备100K。
+  * 注意，这将引发Flash内部的安全控制面板，使用此功能时，请保证swf显示大小至少有215*138像素大小。
+  * 可能产生的事件：
+     #Store:showSettings
+     #Store:showSettingsError
+
 === hasAdequateDimensions(): Boolean ===
+  * 验证是否有足够的空间
+  * 如果SWF不满足 215*138像素大小 则返回 false
 === getModificationDate(): Date ===
+  * 获取最后一次修改时间
 
 
 == 公开给JS的事件 ==
