@@ -15,6 +15,11 @@
 = 关键变更 =
   * 去掉了YUIBridge 加入了 AJBridge。
   * 加入最新的白名单验证方式。
+  * 公开参数关键字变更
+  || *YUIBridge* || *AJBridge* || 
+  || shareData || 已取消 ||
+  || useCompression || useCompression ||
+  || browser || browser ||
   * 公开方法变更
   || *YUIBridge* || *AJBridge* || 
   || getValueOf() || getItem() || 
@@ -51,7 +56,6 @@
  || 不存在  ||  Store:clear ||
  || 不存在 || Store:untrustedDomain ||
  || 不存在 || Store:initialization ||
- || 不存在 || Store:clear ||
  || 不存在 || Store:showSettings ||
  || 不存在 || Store:uncompressError ||
  || 不存在 || Store:flushError ||
@@ -62,7 +66,13 @@
 
 == 公开的参数关键字 ==
 === useCompression ===
+  * 使用压缩标记
+  * 类型： String
+  * 默认为"true".
 === browser===
+  * 指定浏览器专用的本地存储
+  * 类型： String
+  * 默认为 ""
 
 == 公开给JS的方法 ==
 === getLength():uint ===
