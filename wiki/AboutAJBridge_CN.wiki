@@ -1,0 +1,24 @@
+=版本号=
+  * 1.5.1     20100625
+= 介绍 =
+
+  * AJBridge 是  as3 和 js 间封装的桥,用于快速添加对 JS公开的方法.
+  * 是[http://code.google.com/p/ajbridge/ AJBridge项目]和YUIBridge的实践和修改。
+
+
+= 详情 =
+
+== 与YUIBridge的区别 ==
+  # YUIBridge 只有1个事件 “swfReady”。发生于 as3 添加完成所有向JS公开方法后。而 AJBridge则属于类似“手动”模式，由开发者在 as3 添加完成所有向JS公开方法后，某一时刻添加。确保SWF运行时确实已经准备就绪。
+  # 增加了 “init”事件。
+  # 增加了 “addCallback”事件
+  # 增加了  “addCallbacks”事件
+  # 修改了 YUIBridge专有入口参数关键字 "YUIBridgeCallback" 至 AJBridge普适型参数关键字“jsEntry”
+  # 修改了 YUIBridge专有入口参数关键字 “YUISwfId” 至 AJBridge普适型参数关键字“swfID”
+  # 修改了 swf ID的获取方式
+
+== 必要参数关键字 ==
+  
+== 公开的事件 ==
+
+=实践的建议=
