@@ -54,11 +54,11 @@
  || quotaExceededError || 已取消 ||
  || success || Store:success ||
  || 不存在  ||  Store:clear ||
- || 不存在 || Store:untrustedDomain ||
+ || 不存在 || StoreError:untrustedDomain ||
  || 不存在 || Store:initialization ||
  || 不存在 || Store:showSettings ||
- || 不存在 || Store:uncompressError ||
- || 不存在 || Store:flushError ||
+ || 不存在 || StoreError:uncompress ||
+ || 不存在 || StoreError:flush ||
  || 不存在 || Store:showSettingsError ||
  || 不存在 ||Store:new||
 
@@ -86,12 +86,12 @@ _void 表示无返回。_
   * 获取 key的 hash表的长度。相当于key的个数。
   * 如果没有key 则返回 0
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
 === getItem(key: String):`*` ===
   * 获得key下的值。
   * 没有则返回 null。
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
 === setItem(key:String,data:`*`): void ===
   * 设置key下的值。
   * data可以是任何类型。
@@ -100,44 +100,44 @@ _void 表示无返回。_
   * 当key 是已存在且值也相同的则不会做任何事情 ：）
   * 记录修改日期。
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
      # storage
      # Store:pending
-     # Store:flushError
+     # StoreError:flush
 === key(index: int): String ===
   * 从key-hash表中获得此关键字。
   * 没有则返回 null。
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
 === removeItem(key:String): void ===
   * 删除key下的值。
   * 如果找不到 key 在key-hash中则什么也不做。
   * 如果找到，则返回的 storage 事件，其中的 info 为 “delete”。
   * 记录修改日期。
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
      # storage
      # Store:pending
-     # Store:flushError
+     # StoreError:flush
 === clear(): void ===
   * 清空所有内容。原则上则是销毁存在的数据文件。这个版本有个小小改动，将重新创建一个空存档，并再次记录修改日期。
   * 记录修改日期。
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
      # storage
      # Store:pending
-     # Store:flushError
+     # StoreError:flush
      # Store:clear
 === getSize(): uint ===
   * 获得已存储数据量。
   * 单位 B（字节）
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
 === setMinDiskSpace(value: int): String ===
   * 设置存储数据的磁盘空间大小，默认就具备100K。
   * 注意，这将引发Flash内部的安全控制面板，使用此功能时，请保证swf显示大小至少有215*138像素大小。
   * 可能产生的事件：
-     # Store:uncompressError
+     # StoreError:uncompress
      # Store:showSettingsError
 === getUseCompression(): Boolean ===
   * 查看是否使用了压缩。
@@ -163,12 +163,12 @@ _void 表示无返回。_
 === Store:pending ===
 === Store:success ===
 === Store:clear ===
-=== Store:untrustedDomain ===
+=== StoreError:untrustedDomain ===
 === Store:initialization ===
 === Store:showSettings ===
-=== Store:uncompressError ===
-=== Store:flushError ===
-=== Store:showSettingsError  ===
+=== StoreError:uncompress ===
+=== StoreError:flush ===
+=== StoreError:showSettings  ===
 === Store:new ===
 
 详细：
