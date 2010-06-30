@@ -31,7 +31,7 @@
   * 必选
   * 请确保以 flashvars 方式或 类似 swf?swfID = "myAlternativeContent"方式传入。
   * 请确保swfID传入的值 和 SWF所在web 页面中 HTML元素 id一致。
-  * 如果没有指定该值，则默认使用名为“mySWF”的SWF对象，一旦调用失败将报错。
+  * 如果没有指定该值，则首先尝试 ExternalInterface.objectID获取HTML中元素id，由于存在兼容性问题，当仍未取到，则默认使用名为“mySWF”的SWF对象，一旦调用失败将报错。
 
 ===完整示例===
   * 静态方法
