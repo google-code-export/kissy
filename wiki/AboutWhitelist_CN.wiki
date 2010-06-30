@@ -13,9 +13,24 @@
 }}}
 
 
-= Details =
+= 详情 =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+应用方式和  crossdomain.xml 类似。
+当 Flash 访问另一个Flash 中的数据或当js访问web页中Flash 时，该调用的对象将自动试图验证来自该域的访问。如果试图访问方的域包括在该策略文件中，则数据将自动成为可访问数据。
+
+策略文件必须为 xml 文件，并且可以驻留在服务器的根目录或其它目录中。只有在通过 HTTP进行通信的服务器上，策略文件才起作用。
+
+XML 策略文件包含单个 <domain-policy> 标签，该标签又包含零个或多个 <allow-access-from> 标签。每个 <allow-access-from> 标签包含一个属性 domain，该属性指定一个确切的 IP 地址、一个确切的域或一个通配符域（任何域）。通配符域由单个星号 (*)（匹配所有域和所有 IP 地址）或后接后缀的星号（只匹配那些以指定后缀结尾的域）表示。后缀必须以点开头。但是，带有后缀的通配符域可以匹配那些只包含后缀但不包含前导点的域。例如，YOURDOMAIN.net 可以看作是 *.YOURDOMAIN.net 的一部分。IP 域规范中不允许使用通配符。
+
+以下是不推荐的方法：
+允许访问来自任何域的文档
+ {{{
+  <?xml version="1.0" encoding="utf-8"?>
+<domain-policy>   
+       <allow-access-from domain="*" />
+</domain-policy> 
+}}}
+
+
+
+
