@@ -13,9 +13,9 @@
 参考了 HTML5 Web storage 接口 http://dev.w3.org/html5/webstorage/ 和事件  并融入了  SWFStore 中。
 
 = 关键变更 =
-  # 去掉了YUIBridge 加入了 AJBridge。
-  # 加入最新的白名单验证方式。
-  # 公开方法变更
+  * 去掉了YUIBridge 加入了 AJBridge。
+  * 加入最新的白名单验证方式。
+  * 公开方法变更
   || *YUIBridge* || *AJBridge* || 
   || getValueOf() || getItem() || 
   || getItems() || 已取消 || 
@@ -37,7 +37,7 @@
   || setShareData() || 已取消。数据将永久跨域跨浏览器，使用前请考虑[AboutWhitelist_CN 白名单机制] || 
   || getShareData() || 已取消 ||
   || hasAdequateDimensions() || hasAdequateDimensions() ||
-  # 公开事件变更
+  * 公开事件变更
 
 = 详情 =
 
