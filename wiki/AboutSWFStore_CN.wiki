@@ -64,7 +64,7 @@
 
 = 详情 =
 
-== 公开的参数关键字 ==
+== 公开的参数关键字： ==
 === useCompression ===
   * 使用压缩标记
   * 类型： String
@@ -74,11 +74,26 @@
   * 类型： String
   * 默认为 ""
 
-== 公开给JS的方法 ==
+== 公开给JS的方法： ==
+_格式：function(in arguments:type):return-type_
+_其中:_
+_ * 表示无类型，需要再次匹配或判断_
+_void 表示无返回_
+
 === getLength():uint ===
+  * 获取 key的 hash表的长度。相当于key的个数。
+  * 如果没有key 则返回 0
 === getItem(key: String):* ===
+  * 获得key下的值
+  * 没有则返回 null
 === setItem(key:String,data:*): void ===
+  * 设置key下的值
+  * data可以是任何类型
+  * 当key 是已存在且值不同的则，返回的 Store:flushed 事件中的 info 为 “update”
+  * 当key 是不存在的则，返回的 Store:flushed 事件中的 info 为 “add”
+  * 当key 是已存在且值也相同的则不会做任何事情 ：）
 === key(index: int): String ===
+
 === removeItem(key:String): void ===
 === clear(): void ===
 === getSize(): uint ===
