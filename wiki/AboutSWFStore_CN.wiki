@@ -158,18 +158,30 @@ _void 表示无返回。_
 
 == 公开给JS的事件 ==
 === storage ===
-  * 发生写操作成功时，如 removeItem 、 clear、  setItem 等时。
+  * 发生写操作成功时，如 removeItem() 、 clear()、  setItem() 等引发。
 === Store:contentReady ===
+  * 当本地存储就绪
 === Store:pending ===
+  * 可能已达到存储上线，需要删除后进行。
 === Store:success ===
+  * 设置磁盘空间大小后的事件
 === Store:clear ===
+  * 清除一切数据。慎用。
 === `StoreError`:untrustedDomain ===
+  * 不受信任的域。swf所在的web页的域名没有加入到 白名单中。
 === Store:initialization ===
+  * 本地存储初始化完成
 === Store:showSettings ===
+  * 成功显示安全控制面板  
 === `StoreError`:uncompress ===
+  * 数据解压缩失败，可能不需要解压缩。
 === `StoreError`:flush ===
+  * 存入失败 
+  * 请捕获 事件中的 data 或者 info获得更详细的信息
 === `StoreError`:showSettings  ===
+  * 显示安全控制面板失败。请保证swf显示大小至少有215*138像素大小。
 === Store:new ===
+  * 找不到本地数据或者从未创立本地数据时会给出此事件。
 
 详细：
 _"N/A" 表示不适用_
