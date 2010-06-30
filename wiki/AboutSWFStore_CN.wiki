@@ -159,7 +159,6 @@ _void 表示无返回。_
 == 公开给JS的事件 ==
 === storage ===
   * 发生写操作成功时，如 removeItem 、 clear、  setItem 等时。
-  * 返回的值
 === Store:contentReady ===
 === Store:pending ===
 === Store:success ===
@@ -171,3 +170,60 @@ _void 表示无返回。_
 === Store:flushError ===
 === Store:showSettingsError  ===
 === Store:new ===
+
+详细：
+  <table border="1">
+     <thead>
+        <th>type</th>
+        <th>bubbles</th>
+        <th>cancelable</th>
+        <th>key</th>
+        <th>info</th>
+        <th>oldValue</th>
+        <th>newValue</th>
+     </thead>
+     <tbody>
+        <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+  </table>
