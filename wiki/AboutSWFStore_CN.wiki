@@ -86,12 +86,12 @@ _void 表示无返回。_
   * 获取 key的 hash表的长度。相当于key的个数。
   * 如果没有key 则返回 0
   * 可能产生的事件：
-     #Store:uncompressError
+     # Store:uncompressError
 === getItem(key: String):`*` ===
   * 获得key下的值。
   * 没有则返回 null。
   * 可能产生的事件：
-     #Store:uncompressError
+     # Store:uncompressError
 === setItem(key:String,data:`*`): void ===
   * 设置key下的值。
   * data可以是任何类型。
