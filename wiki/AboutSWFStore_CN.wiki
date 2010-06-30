@@ -197,122 +197,122 @@ _"N/A" 表示不适用_
      <tbody>
         <tr>
            <td>Store:pending</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>_key_</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>Store:success</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>storage</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>_key_</td>
+           <td>_update 或 add 或 delete _</td>
+           <td>_原先的数据_</td>
+           <td>_当前写入的数据_</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>Store:clear</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>`StoreError`:untrustedDomain</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>Store:initialization </td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>Store:showSettings</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>`StoreError`:uncompress</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>`StoreError`:flush </td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>`StoreError`:showSettings</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
+           <td>N/A</td>
         </tr>
      </tbody>
      <tbody>
         <tr>
            <td>Store:new</td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>false</td>
+           <td>true</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
+           <td>null</td>
         </tr>
      </tbody>
   </table>
