@@ -157,3 +157,15 @@ _void 表示无返回。_
 
 
 == 公开给JS的事件 ==
+=== Store:flushed ===
+=== Store:contentReady ===
+=== Store:pending ===
+=== Store:success ===
+=== Store:clear ===
+=== Store:untrustedDomain ===
+=== Store:initialization ===
+=== Store:showSettings ===
+=== Store:uncompressError ===
+=== Store:flushError ===
+=== Store:showSettingsError  ===
+=== Store:new ===
