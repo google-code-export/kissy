@@ -84,6 +84,30 @@ swfobject.embedSWF("SWFStore.swf", "myAlternativeContent", "800", "600", "9.0.0"
 }}}
 
   
-== 公开的事件 ==
+== 公开的事件类型 ==
+=== init ===
+  * AJBridge第一个事件。
+  * 此处完成的是 swf传入参数的配置。
+  * 如果swfID无法获取则抛出有*隐含的错误*：可以通过 FlashDevelop的 output查看到。
+=== addCallback ===
+  * AJBridge中与addCallbacks并列的第二个事件。
+  * 注册单个向JS公开方法后产生。
+  * 如果无法调用，则抛出*隐含的错误*。
+=== addCallbacks ===
+  * AJBridge中与addCallback并列的第二个事件。
+  * 注册多个向JS公开方法后产生。
+  * 如果无法调用，则抛出*隐含的错误*。
+=== swfReady ===
+  * AJBridge第三个事件。
+  * 由AS3程序员定义。
+  * 如果无法调用，则抛出*隐含的错误*。
+一般固定的格式（类型&key）:
+  {{{
+{
+ String id, // flash id，用于区分web页中有多个ajb的应用。
+ String type，//事件类型 ，如 “init ”、 “swfReady ”等。
+ any   data  // 任意数据类型，请在外部做匹配或判断。
+}
+}}}
 
 =实践的建议=
