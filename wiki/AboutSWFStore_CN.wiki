@@ -100,45 +100,45 @@ _void 表示无返回。_
   * 当key 是已存在且值也相同的则不会做任何事情 ：）
   * 记录修改日期。
   * 可能产生的事件：
-     #Store:uncompressError
-     #Store:flushed
-     #Store:pending
-     #Store:flushError
+     # Store:uncompressError
+     # Store:flushed
+     # Store:pending
+     # Store:flushError
 === key(index: int): String ===
   * 从key-hash表中获得此关键字。
   * 没有则返回 null。
   * 可能产生的事件：
-     #Store:uncompressError
+     # Store:uncompressError
 === removeItem(key:String): void ===
   * 删除key下的值。
   * 如果找不到 key 在key-hash中则什么也不做。
   * 如果找到，则返回的 Store:flushed 事件，其中的 info 为 “delete”。
   * 记录修改日期。
   * 可能产生的事件：
-     #Store:uncompressError
-     #Store:flushed
-     #Store:pending
-     #Store:flushError
+     # Store:uncompressError
+     # Store:flushed
+     # Store:pending
+     # Store:flushError
 === clear(): void ===
   * 清空所有内容。原则上则是销毁存在的数据文件。这个版本有个小小改动，将重新创建一个空存档，并再次记录修改日期。
   * 记录修改日期。
   * 可能产生的事件：
-     #Store:uncompressError
-     #Store:flushed
-     #Store:pending
-     #Store:flushError
-     #Store:clear
+     # Store:uncompressError
+     # Store:flushed
+     # Store:pending
+     # Store:flushError
+     # Store:clear
 === getSize(): uint ===
   * 获得已存储数据量。
   * 单位 B（字节）
   * 可能产生的事件：
-     #Store:uncompressError
+     # Store:uncompressError
 === setMinDiskSpace(value: int): String ===
   * 设置存储数据的磁盘空间大小，默认就具备100K。
   * 注意，这将引发Flash内部的安全控制面板，使用此功能时，请保证swf显示大小至少有215*138像素大小。
   * 可能产生的事件：
-     #Store:uncompressError
-     #Store:showSettingsError
+     # Store:uncompressError
+     # Store:showSettingsError
 === getUseCompression(): Boolean ===
   * 查看是否使用了压缩。
   * 若要改变，请在初始化的时候通过useCompression进行配置。
@@ -146,8 +146,8 @@ _void 表示无返回。_
   * 显示用户自定义本地存储空间大小。默认就具备100K。
   * 注意，这将引发Flash内部的安全控制面板，使用此功能时，请保证swf显示大小至少有215*138像素大小。
   * 可能产生的事件：
-     #Store:showSettings
-     #Store:showSettingsError
+     # Store:showSettings
+     # Store:showSettingsError
 
 === hasAdequateDimensions(): Boolean ===
   * 验证是否有足够的空间
