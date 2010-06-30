@@ -59,7 +59,7 @@
  || 不存在 || Store:showSettings ||
  || 不存在 || `StoreError`:uncompress ||
  || 不存在 || `StoreError`:flush ||
- || 不存在 || Store:showSettingsError ||
+ || 不存在 || `StoreError`:showSettings ||
  || 不存在 ||Store:new||
 
 
@@ -218,7 +218,95 @@ _"N/A" 表示不适用_
      </tbody>
      <tbody>
         <tr>
+           <td>storage</td>
            <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>Store:clear</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>`StoreError`:untrustedDomain</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>Store:initialization </td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>Store:showSettings</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>`StoreError`:uncompress</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>`StoreError`:flush </td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>`StoreError`:showSettings</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+           <td>Store:new</td>
            <td></td>
            <td></td>
            <td></td>
