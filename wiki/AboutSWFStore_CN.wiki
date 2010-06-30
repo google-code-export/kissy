@@ -51,8 +51,6 @@
  || 不存在  ||  Store:clear ||
  || 不存在 || Store:untrustedDomain ||
  || 不存在 || Store:initialization ||
- || 不存在 || Store:flushed ||
- || 不存在 || Store:pending ||
  || 不存在 || Store:clear ||
  || 不存在 || Store:showSettings ||
  || 不存在 || Store:uncompressError ||
