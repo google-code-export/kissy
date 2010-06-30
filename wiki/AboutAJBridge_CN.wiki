@@ -16,8 +16,16 @@
   # 修改了 YUIBridge专有入口参数关键字 "YUIBridgeCallback" 至 AJBridge普适型参数关键字“jsEntry”
   # 修改了 YUIBridge专有入口参数关键字 “YUISwfId” 至 AJBridge普适型参数关键字“swfID”
   # 修改了 swf ID的获取方式
+  # 增加了 try...catch... 处理来自中国其他第三方浏览器加速产生的SWF配置实效问题。
 
 == 必要参数关键字 ==
+=== jsEntry ===
+  * 必选
+  * 请确保以 flashvars 方式或 类似 swf?jsEntry = "jsEntry"方式传入。
+  * 请确保Web 页中SWF对象 allowScriptAccess 设置为 "always" 。
+  * 传入的值是 web页中已存在的 js 方法名。它将作为 swf 唯一的所有事件出口 。
+  * 如果没有指定该值，则默认使用名为“jsEntry”的js方法。
+
   
 == 公开的事件 ==
 
