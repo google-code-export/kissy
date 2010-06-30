@@ -60,6 +60,7 @@
  || 不存在 || Store:uncompressError ||
  || 不存在 || Store:flushError ||
  || 不存在 || Store:showSettingsError ||
+ || 不存在 ||Store:new||
 
 
 = 详情 =
@@ -77,28 +78,68 @@
 == 公开给JS的方法： ==
 _格式：function(in arguments:type):return-type_
 _其中:_
-_ * 表示无类型，需要再次匹配或判断_
-_void 表示无返回_
+_ * 表示无类型，需要再次匹配或判断。_
+_void 表示无返回。_
 
 === getLength():uint ===
   * 获取 key的 hash表的长度。相当于key的个数。
   * 如果没有key 则返回 0
+  * 可能产生的事件：
+     #Store:uncompressError
 === getItem(key: String):* ===
-  * 获得key下的值
-  * 没有则返回 null
+  * 获得key下的值。
+  * 没有则返回 null。
+  * 可能产生的事件：
+     #Store:uncompressError
 === setItem(key:String,data:*): void ===
-  * 设置key下的值
-  * data可以是任何类型
-  * 当key 是已存在且值不同的则，返回的 Store:flushed 事件中的 info 为 “update”
-  * 当key 是不存在的则，返回的 Store:flushed 事件中的 info 为 “add”
+  * 设置key下的值。
+  * data可以是任何类型。
+  * 当key 是已存在且值不同的则返回的 Store:flushed 事件，其中的 info 为 “update”。
+  * 当key 是不存在的则返回的 Store:flushed 事件，其中的 info 为 “add”。
   * 当key 是已存在且值也相同的则不会做任何事情 ：）
+  * 记录修改日期。
+  * 可能产生的事件：
+     #Store:uncompressError
+     #Store:flushed
+     #Store:pending
+     #Store:flushError
 === key(index: int): String ===
-
+  * 从key-hash表中获得此关键字。
+  * 没有则返回 null。
+  * 可能产生的事件：
+     #Store:uncompressError
 === removeItem(key:String): void ===
+  * 删除key下的值。
+  * 如果找不到 key 在key-hash中则什么也不做。
+  * 如果找到，则返回的 Store:flushed 事件，其中的 info 为 “delete”。
+  * 记录修改日期。
+  * 可能产生的事件：
+     #Store:uncompressError
+     #Store:flushed
+     #Store:pending
+     #Store:flushError
 === clear(): void ===
+  * 清空所有内容。原则上则是销毁存在的数据文件。这个版本有个小小改动，将重新创建一个空存档，并再次记录修改日期。
+  * 记录修改日期。
+  * 可能产生的事件：
+     #Store:uncompressError
+     #Store:flushed
+     #Store:pending
+     #Store:flushError
+     #Store:clear
 === getSize(): uint ===
+  * 获得已存储数据量。
+  * 单位 B（字节）
+  * 可能产生的事件：
+     #Store:uncompressError
 === setMinDiskSpace(value: int): String ===
+  * 设置存储数据的磁盘空间大小，默认就具备100K。
+  * 注意，这将引发Flash内部的安全控制面板，使用此功能时，请保证swf显示大小至少有215*138像素大小。
+  * 可能产生的事件：
+     #Store:uncompressError
+     #Store:showSettingsError
 === getUseCompression(): Boolean ===
+
 === displaySettings(): void ===
 === hasAdequateDimensions(): Boolean ===
 === getModificationDate(): Date ===
