@@ -101,7 +101,8 @@ swfobject.embedSWF("SWFStore.swf", "myAlternativeContent", "800", "600", "9.0.0"
   * AJBridge第三个事件。
   * 由AS3程序员定义。
   * 如果无法调用，则抛出 *隐含的错误* 。
-一般固定的格式（类型&key）:
+
+=== 传给js event的一般固定的格式（类型&key）:===
   {{{
 {
  String id, // flash id，用于区分web页中有多个ajb的应用。
